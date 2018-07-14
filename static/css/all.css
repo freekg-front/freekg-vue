@@ -1,0 +1,111 @@
+/*all*/
+body{
+  background: url("../../static/image/a.jpg") no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+}
+@font-face
+{
+  font-family: my;
+  src: url("../../static/font/my.ttf");
+}
+/*web*/
+@media screen and (min-width: 700px) {
+  /*卡片页面瀑布流布局*/
+  .waterfall{
+    -moz-column-count:4; /* Firefox */
+    -webkit-column-count:4; /* Safari 和 Chrome */
+    column-count:4;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    column-width:23%;
+  }
+  .item{
+    margin: 0 0 1em 0;
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+  /*首页和查询搜索框*/
+  .search-width{
+    width:400px;
+    height:200px;
+    left:50%;
+    top:50%;
+    position:relative;
+    margin-left:-200px;
+    margin-top:-150px;
+  }
+  /*首页按钮组*/
+  .index-btn-container{
+    left:50%;
+    margin-left: -500px;
+    position: fixed;
+    bottom: 200px;
+    background-image: url("../../static/image/a.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    height:100px;
+    width: 1000px;
+  }
+  .index-btn{
+    position: relative;
+    height: 40px;
+    width: auto;
+    top:50%;
+    left:50%;
+    margin-left: -300px;
+    margin-top: -20px;
+  }
+  .btn{
+    color: white;
+    font-family: 'my';
+    font-size: 23px;
+  }
+  .btn:hover{
+    color: #c23531;
+  }
+  /*图谱显示*/
+  .tupu{
+    /*width: 100%;*/
+    width: 650px;
+    height: 580px;
+  }
+}
+/*app*/
+@media screen and (max-width: 700px) {
+  /*首页和查询搜索框*/
+  .search-width{
+    width: 300px;
+    left:50%;
+    top:50%;
+    position:relative;
+    margin-left:-150px;
+    margin-top:-150px;
+  }
+  .index-btn{
+    margin: 20px;
+    width: 100%;
+    position: fixed;
+    top: 400px;
+
+  }
+  .btn{
+    color: black;
+    font-family: 'my';
+    font-size: 20px;
+  }
+
+  /*图谱显示*/
+  .tupu{
+    /*width: 100%;*/
+    width: 350px;
+    height: 300px;
+    margin: 10px 0 20px 0;
+  }
+  /*不显示两边留白布局*/
+  .aside{
+    display: none;
+  }
+}
